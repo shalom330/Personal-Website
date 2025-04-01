@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/contact.css">
+    
+    
+</head>
+<body>    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home 🏠</a></li>
+                <li><a href="about.html">About 👩🏽‍💻</a></li>
+                <li><a href="projects.html">Projects 🎯</a></li>
+                <li><a href="contact.html">Contact 💬</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h3>
+            Heeeyyy. You can reach out to me for any inquiries or collaborations by clicking the button below.
+        </h3>
+        <button id="toggleSocial">Reach Out</button>
+        <div class="social-icons" id="socialIcons">
+            <a href="https://www.instagram.com/of_muturiii" target="_blank"><img src="assets/ig-icon.png" alt="Instagram" style="width: 60px; height: 60px;"></a>
+            <a href="https://wa.me/+254748761037" target="_blank"><img src="assets/Whatsapp_logo.png" alt="Whatsapp" style="width:60px; height:60px;"></a>
+            <a href="https://www.snapchat.com/add/of_muturiii" target="_blank"><img src="assets/Snapchat-Logo.png" alt="Snapchat" style="width:100px; height:55px;"></a>
+            <a href="mailto:shalommuturi33@gmail.com?subject=Hello&body=I%20wanted%20to%20contact%20you."target="_blank"><img src="assets/Gmail-Logo.png" alt="Gmail" style="width:60px; height:50px;"></a>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById('toggleSocial').onclick = function() {
+            var icons = document.getElementById('socialIcons');
+            if (icons.style.display === 'none' || icons.style.display === '') {
+                icons.style.display = 'block';
+            } else {
+                icons.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

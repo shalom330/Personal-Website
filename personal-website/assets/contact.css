@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+header {
+    background-color: #2f7ed1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out
+}
+nav ul li a:hover {
+    color: #d9d9d9da; 
+}
+
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-top: 20px; /* Space above */
+    margin-bottom: 20px; /* Space below */
+    padding: 10px; /* Inner spacing */
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+div {
+    text-align: center;
+}
+
+
+#toggleSocial {
+    background: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+#toggleSocial:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+
+.social-icons {
+    margin-top: 20px;
+    display: none; 
+}
+
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+
+.social-icons img {
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width: 600px) {
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+
