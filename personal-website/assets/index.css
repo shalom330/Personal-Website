@@ -1,12 +1,13 @@
+/* General Styles */
 body {
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;    
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    
+    margin: 0;
+    padding: 0;
 }
 
-
+/* Header Styles */
 header {
     background-color: #2f7ed1;
     color: white;
@@ -17,7 +18,6 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    
 }
 
 nav ul li {
@@ -26,69 +26,85 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
-    transition: color 0.3s ease-in-out
-}
-nav ul li a:hover {
-    color: #d9d9d9da; 
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Profile Container */
 .profile-container {
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    max-width: 900px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .profile-img {
-    width: 150px;  
-    height: 150px;
-    border-radius: 50%; 
-    border-width: 80px;
-    object-fit: cover;          
-    margin-right: 40px;
-    align-items: left;
-    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.8), 0 0 25px 10px rgba(0, 0, 255, 0.8);
-    transition: box-shadow 0.3s ease-in-out;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px;
+    border: 2px solid #0ddbf6; /* Base border color */
+    box-shadow: 0 0 15px rgba(47, 126, 209, 0.6), 0 0 25px rgba(0, 255, 204, 0.6), 0 0 35px rgba(255, 0, 255, 0.5); /* Multi-color glowing effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.profile-img:hover {    
-    box-shadow: 0 0 25px 10px rgba(0, 255, 255, 1), 0 0 35px 15px rgba(0, 0, 255, 1);
+/* Glowing effect on hover */
+.profile-img:hover {
+    box-shadow: 0 0 30px rgba(47, 126, 209, 1), 0 0 50px rgba(0, 255, 204, 0.8), 0 0 70px rgba(255, 0, 255, 0.8); /* Stronger multi-color glow */
+    transform: scale(1.1); /* Slight zoom effect */
 }
 
 .profile-message {
-    max-width: 400px; 
-    font-size: 16px;
-    color: #333;
+    max-width: 500px;
 }
 
 .profile-message h2 {
-    margin: 0;
-    font-size: 20px;
-    color: #333;
+    color: #2f7ed1;
 }
 
-.profile-message p {
-    margin-top: 5px;
-    color: #555;
-    
+/* Paragraph Styling */
+.paragraphs p {
+    background: #e6e6e6;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.paragraph-2 {
+    border-left: 5px solid #2f7ed1;
 }
 
-@media (max-width: 600px) {
-    main {
-        width: 90%;
-        padding: 15px;
+.paragraph-3 {
+    border-left: 5px solid #555;
+}
+
+.paragraph-4 {
+    border-left: 5px solid #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
     }
 }
-
-

@@ -1,0 +1,155 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;  /* Light gray background */
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #2f7ed1;  /* Dark blue */
+    color: #fff;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;  /* Light blue on hover */
+}
+
+/* Main Game Container */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    color: #2c3e50;  /* Dark blue for main heading */
+}
+
+.game-container {
+    background-color: #fff;  /* White background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Riddle Text */
+.riddle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;  /* Dark blue for the riddle text */
+}
+
+/* Options Styling */
+.options {
+    margin-bottom: 20px;
+}
+
+.option {
+    display: block;
+    background-color: #3498db;  /* Blue buttons */
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    background-color: #2980b9;  /* Darker blue on hover */
+}
+
+/* Message Styling (Correct/Incorrect) */
+.message {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.correct {
+    color: #27ae60;  /* Green for correct answer */
+}
+
+.wrong {
+    color: #e74c3c;  /* Red for wrong answer */
+}
+
+/* Final Score Styling */
+#final-score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #2c3e50;  /* Dark blue for final score */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .game-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .option {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .option {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}

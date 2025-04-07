@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Game - Multiple Choice</title>
+    <link rel="stylesheet" href="assets/game.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home 🏠</a></li>
+                <li><a href="projects.html">Projects 🎯</a></li>
+                <li><a href="contact.html">Contact 💬</a></li>
+                <li><a href="Game.html">Game 🎮</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>The Riddle Game 🧩</h1>
+
+    <div class="game-container">
+        <div class="riddle" id="riddle-text"></div>
+        <div class="options" id="options"></div>
+        <div id="message" class="message"></div>
+        <div id="final-score" class="message"></div>
+    </div>
+
+    <script>
+        const riddles = [
+            {
+                question: "What has keys but can't open locks?",
+                options: ["Piano", "Lock", "Computer"],
+                answer: "piano"
+            },
+            {
+                question: "What can travel around the world while staying in the corner?",
+                options: ["Postage Stamp", "Compass", "Map"],
+                answer: "postage stamp"
+            },
+            {
+                question: "What is full of holes but still holds a lot of weight?",
+                options: ["Sieve", "Cloth", "Bag"],
+                answer: "sieve"
+            },
+            {
+                question: "What gets wetter as it dries?",
+                options: ["Towel", "Shower", "Raincoat"],
+                answer: "towel"
+            },
+            {
+                question: "What has a head, a tail, but no body?",
+                options: ["Coin", "Snake", "Lizard"],
+                answer: "coin"
+            }
+        ];
+
+        let currentRiddleIndex = 0;
+        let score = 0;
+
+        function showRiddle() {
+            if (currentRiddleIndex < riddles.length) {
+                const currentRiddle = riddles[currentRiddleIndex];
+                document.getElementById("riddle-text").textContent = currentRiddle.question;
+
+                // Clear any previous options
+                document.getElementById("options").innerHTML = '';
+
+                // Display the options
+                currentRiddle.options.forEach(option => {
+                    const button = document.createElement('button');
+                    button.className = 'option';
+                    button.textContent = option;
+                    button.onclick = () => checkAnswer(option);
+                    document.getElementById("options").appendChild(button);
+                });
+            } else {
+                // Display final score and message based on the score
+                let finalMessage = '';
+                if (score === 1) {
+                    finalMessage = "Poor 😞";
+                } else if (score === 2) {
+                    finalMessage = "Average 😐";
+                } else if (score === 3) {
+                    finalMessage = "Good 😊";
+                } else if (score === 4) {
+                    finalMessage = "Great! 😎";
+                } else if (score === 5) {
+                    finalMessage = "Excellent! 🎉";
+                } else {
+                    finalMessage = "Try again next time! 🙁";
+                }
+
+                document.getElementById("riddle-text").textContent = 'Game Over! Your score is: ' + score;
+                document.getElementById("final-score").textContent = 'Final Score: ' + score;
+                document.getElementById("message").textContent = finalMessage;
+                document.getElementById("message").className = "message final-message";
+            }
+        }
+
+        function checkAnswer(selectedOption) {
+            const correctAnswer = riddles[currentRiddleIndex].answer;
+
+            if (selectedOption.toLowerCase() === correctAnswer.toLowerCase()) {
+                score++;
+                document.getElementById("message").textContent = "Correct! 🎉";
+                document.getElementById("message").className = "message correct";
+            } else {
+                document.getElementById("message").textContent = "Wrong answer! Try again.";
+                document.getElementById("message").className = "message wrong";
+            }
+
+            currentRiddleIndex++;
+            setTimeout(showRiddle, 1000);
+        }
+
+        // Start the game
+        showRiddle();
+    </script>
+
+    <footer class="text-center p-4 bg-gray-800 text-white">
+        © 2025 Muturi. All rights reserved.
+    </footer>
+
+</body>
+</html>
